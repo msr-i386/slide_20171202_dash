@@ -31,17 +31,25 @@
 * 代わりにシェルコマンドを実行するようにハックする
 
 ---
-# セットアップ
+# セットアップ(1)
 
 * Dash Buttonの初期設定を行う
 * 環境整備  
   node.js, pythonが必要
+
+---
+# セットアップ(2)
+
 * dasherのセットアップ  
-$ git clone  
+$ git clone  https://github.com/maddox/dasher.git
 $ vi dasher/config.json  
-※urlの値をhttp://localhost/cgi-bin/execに、bodyの値にコマンドを書く
+※urlの値を"http://localhost/cgi-bin/exec"に、bodyの値にコマンドを書く
 * Dash ButtonのMACアドレスを取得  
 MACアドレスはconfig.jsonへ
+
+---
+# セットアップ(3)
+
 * 実行CGIを書く
 $ 
 * 簡易Webサーバーを実行
@@ -50,3 +58,10 @@ $ python -m CGIHTTPServer
 ---
 # デモ
 
+---
+# 参考
+
+* Amazon Dash ButtonをただのIoTボタンとして使う  
+https://qiita.com/jsoizo/items/3b8bba4160f41aef20f4
+* ワンライナーWebサーバを集めてみた  
+https://qiita.com/sudahiroshi/items/e74d61d939f18779970d#pythoncgihttpserver%E7%B7%A8
