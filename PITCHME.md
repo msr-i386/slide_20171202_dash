@@ -41,7 +41,7 @@
 # セットアップ(2)
 
 * dasherのセットアップ  
-$ git clone  https://github.com/maddox/dasher.git
+$ git clone  https://github.com/maddox/dasher.git  
 $ vi dasher/config.json  
 ※urlの値を"http://localhost/cgi-bin/exec"に、bodyの値にコマンドを書く
 * Dash ButtonのMACアドレスを取得  
@@ -50,9 +50,13 @@ MACアドレスはconfig.jsonへ
 ---
 # セットアップ(3)
 
-* 実行CGIを書く
-$ 
-* 簡易Webサーバーを実行
+* 実行CGIを書く  
+$ cat << EOF > exec  
+> #!/bin/sh  
+>  
+> eval `echo ${QUERY_STRING} | tr '%' '=' | nkf -WwmQ`  
+> EOF
+* 簡易Webサーバーを実行  
 $ python -m CGIHTTPServer
 
 ---
