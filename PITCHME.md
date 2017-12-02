@@ -75,10 +75,14 @@ $ ./script/find_button
 # セットアップ(5)
 
 * 実行CGIを書く  
+
+```
 $ cat cgi-bin/exec  
 #!/bin/sh  
   
 eval \`echo ${QUERY_STRING} | tr '%' '=' | nkf -WwmQ\`
+```
+
 * 簡易Webサーバーを実行  
 $ python -m CGIHTTPServer
 
