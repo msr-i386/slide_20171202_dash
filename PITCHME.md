@@ -45,6 +45,7 @@ $ git clone  https://github.com/maddox/dasher.git
 $ vi dasher/config.json  
 ※urlの値を"http://localhost/cgi-bin/exec"に、bodyの値にコマンドを書く
 * Dash ButtonのMACアドレスを取得  
+$ ./script/find_button
 MACアドレスはconfig.jsonへ
 
 ---
