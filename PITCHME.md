@@ -50,11 +50,29 @@ $ npm install
 
 * Dash ButtonのMACアドレスを取得  
 $ ./script/find_button
-* config.jsonを編集  
-※urlの値を http://localhost/cgi-bin/exec に、bodyの値にコマンドを書く
 
 ---
 # セットアップ(4)
+
+* config/config.jsonを編集  
+
+```
+{"buttons":[
+  {
+    "name" : "test",
+    "address": "xx:xx:xx:xx:xx:xx",
+    "url": "http://localhost:8000/cgi-bin/exec",
+    "method": "GET",
+    "json": true,
+    "body": {"echo TEST":""}
+  }
+]}
+```
+
+※urlの値を http://localhost/cgi-bin/exec に、bodyの値にコマンドを書く
+
+---
+# セットアップ(5)
 
 * 実行CGIを書く  
 $ cat << EOF > exec  
