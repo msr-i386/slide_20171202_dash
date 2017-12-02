@@ -52,10 +52,10 @@ MACアドレスはconfig.jsonへ
 
 * 実行CGIを書く  
 $ cat << EOF > exec  
-> #!/bin/sh  
->  
-> eval `echo ${QUERY_STRING} | tr '%' '=' | nkf -WwmQ`  
-> EOF
+\> #!/bin/sh  
+\>  
+\> eval \`echo ${QUERY_STRING} | tr '%' '=' | nkf -WwmQ\`  
+\> EOF
 * 簡易Webサーバーを実行  
 $ python -m CGIHTTPServer
 
