@@ -17,13 +17,6 @@
 * Webブラウザ [Tungsten](https://app.tungsten-start.net/) の作者
 
 ---
-# 目次
-
-* 前回の復習、今回の目標
-* fork爆弾爆発中のロードアベレージの取り方を考える
-* デモ
-
----
 # Amazon Dash Button
 
 * 押すだけで決まった商品を買えるボタンを搭載
