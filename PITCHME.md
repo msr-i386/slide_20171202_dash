@@ -33,7 +33,19 @@
     * シェルコマンドが実行されるようにする
 
 ---
-# セットアップ(1) Dash Buttonの初期設定
+# 用意するもの
+
+* Amazon Dash Button
+* Wi-Fiルーター
+* MacOSもしくはLinuxがインストールされたPC  
+  注) WSL (Windows Services for Linux)は使用不可
+
+---
+
+# セットアップ
+
+---
+## Dash Buttonの初期設定
 
 * スマートフォン向けAmazonアプリから、Dash Buttonの設定を行う  
   [Amazon公式のセットアップ方法](https://www.amazon.co.jp/gp/help/customer/display.html/ref=amb_link_1?ie=UTF8&nodeId=201746340)を
@@ -42,7 +54,7 @@
   商品を選んでしまうと、注文が成立してしまう
 
 ---
-# セットアップ(2) 環境整備
+## 環境整備(1)
 
 * node.js, pythonのインストール
 ```
@@ -59,13 +71,13 @@ $ npm install
 ```
 
 ---
-# セットアップ(3)
+## 環境整備(2)
 
 * Dash ButtonのMACアドレスを取得  
 $ ./script/find_button
 
 ---
-# セットアップ(4)
+## dasher準備
 
 * config/config.jsonを編集  
 
@@ -85,7 +97,7 @@ $ ./script/find_button
 ※urlの値を http://localhost/cgi-bin/exec に、bodyの値にコマンドを書く
 
 ---
-# セットアップ(5)
+## dasher準備(2)
 
 * 実行CGIを書く  
 
@@ -96,8 +108,11 @@ $ cat cgi-bin/exec
 eval \`echo ${QUERY_STRING} | tr '%' '=' | nkf -WwmQ\`
 ```
 
-* 簡易Webサーバーを実行  
+* 簡易Webサーバーを実行
+
+```
 $ python -m CGIHTTPServer
+```
 
 ---
 # デモ
