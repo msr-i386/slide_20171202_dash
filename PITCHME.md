@@ -38,7 +38,7 @@
 * Amazon Dash Button
 * Wi-Fiルーター
 * MacOSもしくはLinuxがインストールされたPC  
-  注) WSL (Windows Services for Linux)は使用不可
+  注) WSL (Windows Subsystem for Linux)は使用不可
 
 ---
 
