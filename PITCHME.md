@@ -56,9 +56,9 @@
 ---
 ## 環境整備(1)
 
-* node.js, pythonのインストール
+* node.js, libpcapのインストール
 ```
-$ sudo apt install nodejs npm python
+$ sudo apt install nodejs npm libpcap-dev
 $ node -v
 $ python --version
 ```
@@ -84,35 +84,15 @@ $ ./script/find_button
 ```
 {"buttons":[
   {
-    "name" : "test",
+    "name" : "test Dash",
     "address": "xx:xx:xx:xx:xx:xx",
-    "url": "http://localhost:8000/cgi-bin/exec",
-    "method": "GET",
-    "json": true,
-    "body": {"echo TEST":""}
+    "cmd": "echo TEST"
   }
 ]}
 ```
 
-※urlの値を http://localhost/cgi-bin/exec に、bodyの値にコマンドを書く
-
----
-## dasher準備(2)
-
-* 実行CGIを書く  
-
-```
-$ cat cgi-bin/exec  
-#!/bin/sh  
-  
-eval \`echo ${QUERY_STRING} | tr '%' '=' | nkf -WwmQ\`
-```
-
-* 簡易Webサーバーを実行
-
-```
-$ python -m CGIHTTPServer
-```
+※dasherにはURLのリクエストを送ったり、任意のコマンド実行したりできる  
+　[IFTTT](https://ifttt.com/)と連携したり、[AWS API Gateway](https://aws.amazon.com/jp/api-gateway/)に投げたりするのが実用的
 
 ---
 # デモ
