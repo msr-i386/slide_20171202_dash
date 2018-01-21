@@ -1,6 +1,6 @@
 # Amazon Dash Hack
 
-@第32回シェル芸勉強会 大阪サテライト
+@第33回シェル芸勉強会 大阪サテライト
 
 ---
 # 目次
@@ -13,37 +13,50 @@
 # 自己紹介
 
 * ハンドルネーム: MSR
- * [Twitter ID: @msr386](https://twitter.com/msr386)
+    * [Twitter ID: @msr386](https://twitter.com/msr386)
 * Webブラウザ [Tungsten](https://app.tungsten-start.net/) の作者
 
 ---
 # Amazon Dash Button
 
-* 押すだけで決まった商品を買えるボタンを搭載
+* 押すだけで商品が買えるボタン (※要設定)
 * 定価500円
-* 初回購入時に500円割引してくれるので実質タダで手に入る
+* 初回購入時に500円割引してくれるので実質タダで入手可能
 * Amazon Prime会員限定
 
 ---
 # 今回の目的
 
-* 押しても商品を買えないようにする
-* 代わりにシェルコマンドを実行するようにハックする
+* Dash Buttonをハックする
+    * ボタンを押しても商品を買えないようにする
+    * dasherを使用してHTTPリクエストをオーバーライドする
+    * シェルコマンドが実行されるようにする
 
 ---
-# セットアップ(1)
+# セットアップ(1) Dash Buttonの初期設定
 
-* Dash Buttonの初期設定を行う
-* 環境整備  
-  node.js, pythonが必要
+* スマートフォン向けAmazonアプリから、Dash Buttonの設定を行う  
+  [Amazon公式のセットアップ方法](https://www.amazon.co.jp/gp/help/customer/display.html/ref=amb_link_1?ie=UTF8&nodeId=201746340)を
+  参照し、Dash Buttonの設定を行っていく。ただし...
+* 商品選択画面(下図)で商品を選ばずに終了する (重要)  
+  商品を選んでしまうと、注文が成立してしまう
 
 ---
-# セットアップ(2)
+# セットアップ(2) 環境整備
 
-* dasherのセットアップ  
+* node.js, pythonのインストール
+```
+$ sudo apt install nodejs python
+$ node -v
+$ python --version
+```
+
+* dasherのインストール
+```
 $ git clone  https://github.com/maddox/dasher.git  
 $ cd dasher  
 $ npm install
+```
 
 ---
 # セットアップ(3)
