@@ -39,6 +39,7 @@
 * Wi-Fiルーター
 * MacOSもしくはLinuxがインストールされたPC  
   注) WSL (Windows Subsystem for Linux)は使用不可
+* root権限
 
 ---
 
@@ -86,6 +87,7 @@ $ ./script/find_button
   {
     "name" : "test Dash",
     "address": "xx:xx:xx:xx:xx:xx",
+    "protocol": "udp",
     "cmd": "echo TEST"
   }
 ]}
@@ -93,6 +95,13 @@ $ ./script/find_button
 
 ※dasherにはURLのリクエストを送ったり、任意のコマンド実行したりできる  
 　[IFTTT](https://ifttt.com/)と連携したり、[AWS API Gateway](https://aws.amazon.com/jp/api-gateway/)に投げたりするのが実用的
+
+---
+## 実行
+
+```
+$ sudo npm run start
+```
 
 ---
 # デモ
