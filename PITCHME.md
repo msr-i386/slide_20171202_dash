@@ -58,7 +58,7 @@
 
 * node.js, pythonのインストール
 ```
-$ sudo apt install nodejs python
+$ sudo apt install nodejs npm python
 $ node -v
 $ python --version
 ```
