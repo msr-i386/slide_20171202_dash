@@ -117,4 +117,4 @@ https://qiita.com/sudahiroshi/items/e74d61d939f18779970d#pythoncgihttpserver%E7%
 ---
 # おまけ
 
-Amazon 自爆 Dash Button
+自爆 Dash Button
