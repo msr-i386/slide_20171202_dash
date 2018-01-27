@@ -51,7 +51,7 @@
 * スマートフォン向けAmazonアプリから、Dash Buttonの設定を行う  
   [Amazon公式のセットアップ方法](https://www.amazon.co.jp/gp/help/customer/display.html/ref=amb_link_1?ie=UTF8&nodeId=201746340)を
   参照し、Dash Buttonの設定を行っていく。ただし...
-* 商品選択画面(下図)で商品を選ばずに終了する (重要)  
+* 商品選択画面で商品を選ばずに終了する (重要)  
   商品を選んでしまうと、注文が成立してしまう
 
 ---
