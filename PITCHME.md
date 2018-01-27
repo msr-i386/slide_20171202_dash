@@ -113,3 +113,8 @@ $ sudo npm run start
 https://qiita.com/jsoizo/items/3b8bba4160f41aef20f4
 * ワンライナーWebサーバを集めてみた  
 https://qiita.com/sudahiroshi/items/e74d61d939f18779970d#pythoncgihttpserver%E7%B7%A8
+
+---
+# おまけ
+
+Amazon 自爆 Dash Button
